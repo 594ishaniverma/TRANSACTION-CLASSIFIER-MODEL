@@ -3,7 +3,7 @@
 A Flask-based web application that classifies bank transaction descriptions into categories and transaction types using machine learning.
 
 ## Features
-
+##project
 - **Transaction Classification**: Automatically categorizes transactions (Food & Dining, Shopping, Bills & Utilities, etc.)
 - **Transaction Type Detection**: Identifies if a transaction is credited or debited
 - **Amount Extraction**: Extracts transaction amounts from descriptions
