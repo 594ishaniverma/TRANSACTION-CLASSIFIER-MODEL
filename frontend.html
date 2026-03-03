@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Classifier</title>
+    <link rel="stylesheet" href="frontend.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💰 Transaction Classifier</h1>
+            <p>Classify your transaction description into category and type</p>
+        </div>
+
+        <div class="main-content">
+            <div class="input-section">
+                <label for="description">Transaction Description:</label>
+                <textarea 
+                    id="description" 
+                    placeholder="e.g., rs 5000 debited for zomato order on 24 august"
+                    rows="4"
+                ></textarea>
+                <button id="predictBtn" onclick="predictTransaction()">
+                    <span id="btnText">Predict</span>
+                    <span id="btnLoader" class="loader" style="display: none;"></span>
+                </button>
+            </div>
+
+            <div id="results" class="results-section" style="display: none;">
+                <h2>Prediction Results</h2>
+                
+                <div class="result-card">
+                    <div class="result-item">
+                        <span class="label">Description:</span>
+                        <span class="value" id="resultDescription">-</span>
+                    </div>
+                    
+                    <div class="result-item">
+                        <span class="label">Category:</span>
+                        <span class="value category-badge" id="resultCategory">-</span>
+                    </div>
+                    
+                    <div class="result-item">
+                        <span class="label">Transaction Type:</span>
+                        <span class="value type-badge" id="resultType">-</span>
+                    </div>
+                    
+                    <div class="result-item">
+                        <span class="label">Amount:</span>
+                        <span class="value amount-value" id="resultAmount">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="error" class="error-message" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script src="frontend.js"></script>
+</body>
+</html>
+
